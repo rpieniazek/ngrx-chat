@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ThreadsService} from "../services/threads.service";
 
 @Component({
   selector: 'app-user-section',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
