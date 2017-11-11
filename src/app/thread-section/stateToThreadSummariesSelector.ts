@@ -21,6 +21,6 @@ function mapToThreadSummary(state: ApplicationState, thread: Thread): ThreadSumm
     id: thread.id,
     participantNames: _.join(names, ","),
     lastMessageText: lastMessage.text,
-    timeStamp: lastMessage.timestamp
+    timestamp: lastMessage.timestamp
   }
 }

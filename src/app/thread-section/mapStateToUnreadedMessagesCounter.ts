@@ -1,5 +1,5 @@
-import {Thread} from "../model/thread";
-import {ApplicationState} from "../store/application-state";
+import { Thread } from "../model/thread";
+import { ApplicationState } from "../store/application-state";
 import * as _ from "lodash";
 
 export function mapStateToUnreadedMessagesCounter(state: ApplicationState): number {
@@ -7,6 +7,7 @@ export function mapStateToUnreadedMessagesCounter(state: ApplicationState): numb
 
   return _.values<Thread>(state.storeData.threads)
     .reduce((acc, thread) =>
-      thread.participants[currentUserId], 0
+      acc + (thread.participants[currentUserId] || 0)
+      , 0
     );
 }
